@@ -3,11 +3,18 @@
   --red: #da0c0c;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+
 .clock {
   position: relative;
   width: 400px;
   height: 400px;
-  margin: 70px auto;
+  margin: 70px auto 50px;
+  font-size: 30px;
   border: 2px solid var(--main-color);
   border-radius: 50%;
 }
@@ -18,7 +25,6 @@
   left: 50px;
   width: 300px;
   height: 300px;
-  font-size: 30px;
   text-align: center;
 }
 
@@ -68,4 +74,8 @@
   border: 2px solid var(--red);
   border-radius: 50%;
   transform: translate(-3px, -1.5px);
+}
+
+.date-time {
+  font-weight: 700;
 }
