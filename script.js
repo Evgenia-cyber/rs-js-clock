@@ -18,13 +18,15 @@ const setTime = () => {
 
   const seconds = now.getSeconds();
   const secondsDegrees = (360 / 60) * seconds + 90; // 360 degrees - clock-face, 90 degrees - rotate in css for .hand
-  console.log(seconds, secondsDegrees);
   secondElem.style.transform = `rotate(${secondsDegrees}deg)`;
 
   const minutes = now.getMinutes();
   const minutesDegrees = (360 / 60) * minutes + 90; // 360 degrees - clock-face, 90 degrees - rotate in css for .hand
-  console.log('min', minutes, minutesDegrees);
   minuteElem.style.transform = `rotate(${minutesDegrees}deg)`;
+
+  const hours = now.getHours();
+  const hoursDegrees = (360 / 12) * hours + 90; // 360 degrees - clock-face, 90 degrees - rotate in css for .hand
+  hourElem.style.transform = `rotate(${hoursDegrees}deg)`;
 };
 
 createClockFace();
