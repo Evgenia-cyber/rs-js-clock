@@ -8,6 +8,19 @@ const digitsElems = document.querySelectorAll('.digit');
 
 const dateTimeElem = document.querySelector('.date-time');
 
+const themeButton = document.querySelector('.change-theme-btn');
+
+themeButton.addEventListener('click', (event) => {
+  const htmlElem = document.querySelector('html');
+  if (htmlElem.classList.contains('dark')) {
+    htmlElem.classList.remove('dark');
+    event.target.textContent = 'Выбрать тёмную тему';
+  } else {
+    htmlElem.classList.add('dark');
+    event.target.textContent = 'Выбрать светлую тему';
+  }
+});
+
 const createClockFace = () =>
   digitsElems.forEach((elem, index) => {
     elem.style.transform = `rotate(${30 * index}deg)`;

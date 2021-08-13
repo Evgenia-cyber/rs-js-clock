@@ -1,6 +1,15 @@
 :root {
   --main-color: #000000;
+  --bg-color: #ffffff;
   --red: #da0c0c;
+}
+
+html.dark {
+  --main-color: #ffffff;
+  --bg-color: #000000;
+
+  color: var(--main-color);
+  background-color: var(--bg-color);
 }
 
 body {
@@ -78,4 +87,18 @@ body {
 
 .date-time {
   font-weight: 700;
+}
+
+.button {
+  padding: 10px;
+  font-size: 18px;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  transition: background-color, 0.3s;
+  border: 1px solid var(--main-color);
+}
+
+.button:hover {
+  background-color: var(--red);
+  cursor: pointer;
 }
