@@ -10,6 +10,10 @@ const dateTimeElem = document.querySelector('.date-time');
 
 const themeButton = document.querySelector('.change-theme-btn');
 
+const bgButton = document.querySelector('.change-bg-btn');
+
+let click = 0;
+
 themeButton.addEventListener('click', (event) => {
   const htmlElem = document.querySelector('html');
   if (htmlElem.classList.contains('dark')) {
@@ -18,6 +22,22 @@ themeButton.addEventListener('click', (event) => {
   } else {
     htmlElem.classList.add('dark');
     event.target.textContent = 'Выбрать светлую тему';
+  }
+});
+
+bgButton.addEventListener('click', (event) => {
+  click++;
+  const htmlElem = document.querySelector('html');
+  if (click > 5) {
+    click = 0;
+    htmlElem.style.backgroundImage = 'none';
+    event.target.textContent = 'Добавить фон';
+  } else {
+    event.target.textContent = 'Изменить фон';
+    htmlElem.style.backgroundImage = `url(assets/img/${click}.jpg)`;
+    htmlElem.style.backgroundRepeat = 'no-repeat';
+    htmlElem.style.backgroundPosition = 'center';
+    htmlElem.style.backgroundSize = 'cover';
   }
 });
 
