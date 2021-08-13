@@ -4,24 +4,41 @@
 }
 
 .clock {
-  width: 350px;
-  height: 350px;
+  position: relative;
+  width: 400px;
+  height: 400px;
   margin: 70px auto;
   border: 2px solid var(--main-color);
   border-radius: 50%;
 }
 
-.clock-face {
+.digit {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.digit p {
+  margin: -40px;
+}
+
+.clock-hands {
   position: relative;
-  width: 350px;
-  height: 350px;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
   transform: translateY(1.5px); /* because hand's height =3px */
 }
 
 .hand {
   position: absolute;
   top: 50%;
-  left: calc((350px - 2 * 150px) / 2 + 3px / 2);
+  left: calc((400px - 2 * 150px) / 2 + 3px / 2);
   /* left: 26.5px; */
   height: 3px;
   width: 150px;
@@ -30,8 +47,8 @@
   transform-origin: 100%;
 }
 
-.minute-hand {
-  left: calc((350px - 2 * 100px) / 2 + 3px / 2);
+.hour-hand {
+  left: calc((400px - 2 * 100px) / 2 + 3px / 2);
   /* left: 76.5px; */
   width: 100px;
 }
