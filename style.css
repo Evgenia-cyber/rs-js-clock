@@ -100,7 +100,7 @@ body {
 }
 
 .date-time {
-  width: 400px;
+  width: 500px;
   padding: 10px;
   box-sizing: border-box;
   font-weight: 700;
@@ -112,7 +112,7 @@ body {
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 500px;
 }
 
 .button {

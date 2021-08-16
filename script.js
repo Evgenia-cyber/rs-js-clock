@@ -31,9 +31,9 @@ bgButton.addEventListener('click', (event) => {
   if (click > 5) {
     click = 0;
     htmlElem.style.backgroundImage = 'none';
-    event.target.textContent = 'Добавить фон';
+    event.target.textContent = 'Добавить изображение';
   } else {
-    event.target.textContent = 'Изменить фон';
+    event.target.textContent = 'Изменить изображение';
     htmlElem.style.backgroundImage = `url(assets/img/${click}.jpg)`;
     htmlElem.style.backgroundRepeat = 'no-repeat';
     htmlElem.style.backgroundPosition = 'center';
