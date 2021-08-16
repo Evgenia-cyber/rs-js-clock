@@ -4,6 +4,12 @@
   --red: #da0c0c;
 }
 
+html {
+  background-color: var(--bg-color);
+  transition: background-image 1s cubic-bezier(0.53, -0.1, 0.36, 0.97),
+    background-color 1s cubic-bezier(0.09, -0.35, 0.96, 1.4);
+}
+
 html.dark {
   --main-color: #ffffff;
   --bg-color: #000000;
@@ -29,7 +35,7 @@ body {
   width: 400px;
   height: 400px;
   margin-bottom: 20px;
-  margin-top: calc( (100vh - 400px - 30px - 50px - 43px) / 2);
+  margin-top: calc((100vh - 400px - 30px - 50px - 43px) / 2);
   font-size: 30px;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
